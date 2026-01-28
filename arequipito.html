@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>COSTA WRica HOY — Edición Extraordinaria</title>
+
+  <style>
+    :root{
+      --paper:#fffdf7;
+      --ink:#141414;
+      --muted:#5a5a5a;
+      --rule:#d9cdb7;
+      --bg:#f6f1e7;
+      --accent:#7a1f1f;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      padding:22px;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Georgia, "Times New Roman", serif;
+    }
+
+    .paper{
+      max-width:1000px;
+      margin:0 auto;
+      background:var(--paper);
+      border:1px solid var(--rule);
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      padding:26px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid var(--rule);
+      padding-bottom:8px;
+      margin-bottom:10px;
+    }
+
+    .kicker{
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--accent);
+      font-size:13px;
+    }
+
+    .price{
+      font-weight:700;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .masthead{
+      text-align:center;
+      border-bottom:3px solid var(--ink);
+      padding-bottom:12px;
+      margin-bottom:18px;
+    }
+
+    .masthead h1{
+      margin:0;
+      font-size:56px;
+      letter-spacing:.04em;
+    }
+
+    .meta{
+      margin-top:6px;
+      font-size:14px;
+      color:var(--muted);
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .headline{
+      font-size:42px;
+      line-height:1.08;
+      font-weight:900;
+      margin:10px 0;
+    }
+
+    .subhead{
+      font-size:18px;
+      color:var(--muted);
+      margin-bottom:16px;
+      line-height:1.5;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap:22px;
+    }
+
+    .photo img{
+      width:100%;
+      display:block;
+      border:1px solid var(--rule);
+    }
+
+    .caption{
+      font-size:13px;
+      color:var(--muted);
+      font-style:italic;
+      margin-top:6px;
+    }
+
+    .article{
+      column-count:2;
+      column-gap:20px;
+      column-fill: balance;
+      font-size:16px;
+      line-height:1.65;
+      margin-top:16px;
+    }
+
+    .article p{
+      margin:0 0 12px;
+      text-align:justify;
+      hyphens:auto;
+    }
+
+    .dateline{
+      font-weight:700;
+    }
+
+    .pull{
+      border-top:1px solid var(--rule);
+      border-bottom:1px solid var(--rule);
+      padding:10px 0;
+      margin:14px 0;
+      font-weight:700;
+      font-size:18px;
+    }
+
+    aside{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .tag{
+      border:1px solid var(--rule);
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff;
+      font-size:13px;
+      width:fit-content;
+    }
+
+    .box{
+      border:1px solid var(--rule);
+      background:#fff;
+      padding:12px;
+    }
+
+    .box-title{
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .box ul{
+      margin:0;
+      padding-left:18px;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .timeline .item{
+      border-left:3px solid var(--rule);
+      padding-left:10px;
+      margin-bottom:8px;
+      font-size:14px;
+    }
+
+    .time{
+      font-weight:900;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .quote{
+      border:1px solid var(--rule);
+      background:#fffdf7;
+      padding:12px;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .quote span{
+      display:block;
+      margin-top:6px;
+      font-style:italic;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .seal{
+      border:2px dashed var(--accent);
+      text-align:center;
+      padding:12px;
+      background:#fff;
+    }
+
+    .seal strong{
+      color:var(--accent);
+      font-size:18px;
+      display:block;
+      margin:6px 0;
+    }
+
+    .footer{
+      margin-top:20px;
+      border-top:1px solid var(--rule);
+      padding-top:10px;
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .article{column-count:1}
+      .masthead h1{font-size:44px}
+      .headline{font-size:34px}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="paper">
+
+    <div class="topbar">
+      <div class="kicker">EDICIÓN EXTRAORDINARIA</div>
+      <div class="price">₡ 300</div>
+    </div>
+
+    <header class="masthead">
+      <h1>COSTA WRica HOY</h1>
+      <div class="meta">
+        <span><strong>Miércoles 28 de enero del 2026</strong></span>
+        <span>San José, Costa WRica</span>
+      </div>
+    </header>
+
+    <h2 class="headline">
+      Arrunchis Burgos Gómez, “Arequipito”, es declarado Héroe Nacional tras vencer una gripota histórica
+    </h2>
+
+    <p class="subhead">
+      Con mascarilla al frente y té estratégico en mano, el oriundo de
+      <strong>Ibaguescazú del Sur</strong> evitó una invasión de gérmenes y salvó
+      a una Crespa de <strong>Ibaguescazú del Norte</strong>.
+    </p>
+
+    <section class="grid">
+      <div>
+        <div class="photo">
+          <img src="arequipito.png" alt="Arequipito héroe nacional">
+        </div>
+        <div class="caption">
+          Arequipito en plena misión sanitaria: mascarilla en alto, té en mano y determinación intacta.
+        </div>
+
+        <div class="pull">
+          “Ni los estornudos pudieron quebrar su determinación”, afirmaron fuentes oficiales.
+        </div>
+
+        <article class="article">
+          <p class="dateline"><strong>Ibaguescazú del Sur.</strong> —</p>
+
+          <p>
+            En una sesión solemne cargada de aplausos, pañuelos desechables y té caliente,
+            el Gobierno de Costa WRica declaró hoy <strong>Héroe Nacional</strong> a
+            <strong>Arrunchis Burgos Gómez</strong>, conocido popularmente como
+            <strong>“Arequipito”</strong>, por su valiente hazaña al combatir una gripota
+            de proporciones épicas y salvar al país de una inminente invasión de gérmenes.
+          </p>
+
+          <p>
+            Oriundo de Ibaguescazú del Sur, Arequipito enfrentó la amenaza con recursos
+            limitados pero espíritu indomable: una mascarilla al frente, una taza de té
+            estratégico en mano y una determinación que, según fuentes oficiales,
+            “ni los estornudos pudieron quebrar”.
+          </p>
+
+          <p>
+            El acto heroico tuvo una motivación profundamente personal: salvar a una
+            crespa de Ibaguescazú del Norte, quien se encontraba en la línea directa
+            de contagio. “No lo pensó dos veces”, relató un testigo.
+            “Se arrunchó contra la adversidad y avanzó”.
+          </p>
+
+          <p>
+            Entre los detalles que humanizan al nuevo prócer, se confirmó que
+            Arequipito odia los mangos, pero encuentra fuerza espiritual en su fruta
+            favorita: la sandía, aliada clave en su recuperación post-heroica.
+          </p>
+
+          <p>
+            Autoridades del Ministerio de Salud confirmaron que, de no haberse actuado con la rapidez
+            demostrada por Arequipito, la situación pudo haber escalado a niveles de congestión nasal
+            sin precedentes. “La clave fue no subestimar los primeros síntomas”, explicó una fuente técnica.
+          </p>
+
+          <p>
+            Durante las horas más críticas, el héroe mantuvo una disciplina sanitaria estricta:
+            líquidos calientes, reposo estratégico y vigilancia permanente del entorno inmediato.
+            Especialistas coinciden en que estas prácticas marcaron la diferencia en la contención.
+          </p>
+
+          <p>
+            El episodio despertó también una ola de solidaridad ciudadana. Vecinos reportaron intercambios
+            espontáneos de té, mensajes de apoyo y recomendaciones caseras que fortalecieron el ánimo colectivo
+            mientras la comunidad permanecía atenta a cada avance del “frente germinal”.
+          </p>
+
+          <p>
+            Analistas sociales señalaron que el caso de Arequipito revaloriza el concepto de heroísmo cotidiano:
+            aquel que nace desde la empatía, la responsabilidad y el cuidado mutuo, sin buscar reflectores ni
+            reconocimientos previos.
+          </p>
+
+          <p>
+            Más allá de la anécdota, el suceso dejó una enseñanza clara: la prevención y el autocuidado siguen
+            siendo herramientas fundamentales para proteger a la comunidad, incluso ante escenarios que suelen
+            subestimarse como una simple gripe.
+          </p>
+
+          <p>
+            La ceremonia concluyó con un llamado nacional a la prevención: hidratación, abrigo y té. Costa WRica
+            celebra hoy a un héroe cotidiano que demostró que, aun con gripe, el coraje puede ser contagioso
+            (en el buen sentido).
+          </p>
+
+          <p><em>— Redacción Nacional</em></p>
+        </article>
+      </div>
+
+      <aside>
+        <div class="tag"><strong>Última hora:</strong> Nación respira tranquila</div>
+        <div class="tag"><strong>Dato humano:</strong> Odia los mangos</div>
+        <div class="tag"><strong>Fruta favorita:</strong> Sandía 🍉</div>
+        <div class="tag"><strong>Origen:</strong> Ibaguescazú del Sur</div>
+
+        <div class="box">
+          <div class="box-title">Perfil del Héroe</div>
+          <ul>
+            <li><strong>Alias:</strong> Arequipito</li>
+            <li><strong>Procedencia:</strong> Ibaguescazú del Sur</li>
+            <li><strong>Armas:</strong> mascarilla y té</li>
+            <li><strong>Motivación:</strong> una crespa del Norte</li>
+            <li><strong>No le gusta:</strong> El mango</li>
+            <li><strong>Fortaleza:</strong> sandía</li>
+          </ul>
+        </div>
+
+        <div class="box timeline">
+          <div class="box-title">Cronología</div>
+          <div class="item"><div class="time">07:12</div> Se detecta la gripota</div>
+          <div class="item"><div class="time">08:03</div> Té activado</div>
+          <div class="item"><div class="time">09:41</div> Gérmenes contenidos</div>
+          <div class="item"><div class="time">11:00</div> Crespa a salvo</div>
+        </div>
+
+        <div class="quote">
+          “El té fue estratégico. La mascarilla fue bandera.”
+          <span>— Fuentes oficiales</span>
+        </div>
+
+        <div class="seal">
+          DISTINCIÓN OFICIAL
+          <strong>HÉROE NACIONAL</strong>
+          Costa WRica · 2026
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 COSTA WRica HOY</span>
+      <span>Sección: Nación · Salud · Héroes con té</span>
+    </footer>
+
+  </main>
+</body>
+</html>
